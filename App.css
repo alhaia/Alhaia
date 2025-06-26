@@ -1,0 +1,261 @@
+:root {
+  --radius: 0.625rem;
+  --palestinian-red: #ee2a35;
+  --palestinian-blue: #004d99;
+  --palestinian-white: #ffffff;
+}
+
+.dark {
+  --palestinian-red: #ee2a35;
+  --palestinian-blue: #004d99;
+  --palestinian-white: #ffffff;
+}
+
+/* Custom styles for Palestinian Life Society website */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--palestinian-white);
+  color: #333;
+  direction: rtl; /* Right-to-left for Arabic */
+  text-align: right; /* Align text to the right */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: var(--palestinian-red);
+  color: var(--palestinian-white);
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: var(--palestinian-white);
+}
+
+.header .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.nav {
+  background-color: var(--palestinian-blue);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  color: var(--palestinian-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--palestinian-red), var(--palestinian-blue));
+  color: var(--palestinian-white);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.hero .stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.hero .stat-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.section {
+  padding: 40px 20px;
+  background-color: var(--palestinian-white);
+  border-bottom: 1px solid #eee;
+}
+
+.section h2 {
+  color: var(--palestinian-red);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(33% - 20px); /* Three cards per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the area, crop if necessary */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--palestinian-blue);
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555;
+}
+
+.contact-info {
+  background-color: var(--palestinian-blue);
+  color: var(--palestinian-white);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: var(--palestinian-white);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: var(--palestinian-white);
+  font-size: 2em;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+.footer {
+  background-color: #333;
+  color: var(--palestinian-white);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+.join-us-button {
+  display: inline-block;
+  background-color: var(--palestinian-red);
+  color: var(--palestinian-white);
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.join-us-button:hover {
+  background-color: #c00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .nav ul li {
+    margin: 0 8px;
+  }
+
+  .hero h2 {
+    font-size: 2.5em;
+  }
+
+  .hero .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: calc(50% - 20px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .card {
+    width: 100%; /* One card per row on small screens */
+  }
+}
